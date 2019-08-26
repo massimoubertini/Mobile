@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:HomeBasePage xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    xmlns:local="clr-namespace:SkiaSharpFormsDemos"
+                    x:Class="SkiaSharpFormsDemos.Transforms.TransformsHomePage"
+                    Title="SkiaSharp Trasformazioni"
+                    Padding="10">
+    <TableView Intent="Menu">
+        <TableRoot>
+            <TableSection Title="Traduzione di Trasformazioni">
+                <TextCell Text="Traduzione accumulata"
+                          Detail="Scopri come si accumulano le trasformazioni"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.AccumulatedTranslatePage}" />
+
+                <TextCell Text="Traduci effetto testo"
+                          Detail="Usa la traslazione per gli effetti base del testo"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.TranslateTextEffectsPage}" />
+
+                <TextCell Text="Array di Hendecagram"
+                          Detail="Disegna 11 punti fissati sulla pagina"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.HendecagramArrayPage}" />
+
+                <TextCell Text="Animazione di Hendecagram"
+                          Detail="Ruota la stella a 11 punte in un cerchio"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.HendecagramAnimationPage}" />
+            </TableSection>
+
+            <TableSection Title="Trasformazione di scala">
+                <TextCell Text="Scala di base"
+                          Detail="Sperimenta la trasformazione di scala"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.BasicScalePage}" />
+
+                <TextCell Text="Scala centrata"
+                          Detail="Scala rispetto ad un punto centrale specificato"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.CenteredScalePage}" />
+
+                <TextCell Text="Scala Anisotropica"
+                          Detail="Estende un oggetto grafico per riempire la pagina"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.AnisotropicScalingPage}" />
+
+                <TextCell Text="Testo Anisotropico"
+                          Detail="Estende il testo per riempire la pagina"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.AnisotropicTextPage}" />
+
+                <TextCell Text="Scala Isotropica"
+                          Detail="Mantiene le proporzioni durante il ridimensionamento"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.IsotropicScalingPage}" />
+            </TableSection>
+
+            <TableSection Title="Trasformazione di rotazione">
+                <TextCell Text="Rotazione di base"
+                          Detail="Sperimenta con la rotazione"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.BasicRotatePage}" />
+
+                <TextCell Text="Rotazione centrata"
+                          Detail="Ruota gli oggetti intorno ad un punto centrale"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.CenteredRotatePage}" />
+
+                <TextCell Text="Testo Ruotato"
+                          Detail="Ruota una stringa di testo intorno ad un centro"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.RotatedTextPage}" />
+
+                <TextCell Text="Ruota e Gira"
+                          Detail="Ruota un quadrato intorno al suo centro e anche gira"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.RotateAndRevolvePage}" />
+
+                <TextCell Text="Orologio Analogico"
+                          Detail="Prima prova con un orologio analogico"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.UglyAnalogClockPage}" />
+            </TableSection>
+
+            <TableSection Title="Trasformazione d'inclinazione">
+                <TextCell Text="Esperimento d'inclinazione"
+                          Detail="Scopri come funziona la trasformazione d'inclinazione"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.SkewExperimentPage}" />
+
+                <TextCell Text="Esperimento angolo d'inclinazione"
+                          Detail="Specifica l'inclinazione in termini di angoli"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.SkewAngleExperimentPage}" />
+
+                <TextCell Text="Testo Obliquo"
+                          Detail="Inclina il testo per un effetto obliquo (o corsivo)"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.ObliqueTextPage}" />
+
+                <TextCell Text="Inclina testo ombreggiato"
+                          Detail="Usa la trasformazione d'inclinazione per un'ombreggiatura del testo"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.SkewShadowTextPage}" />
+            </TableSection>
+
+            <TableSection Title="Trasformazioni di matrice">
+                <TextCell Text="Trasformazione del percorso"
+                          Detail="Applica una trasformazione ad un percorso"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.PathTransformPage}" />
+
+                <TextCell Text="Mostra matrice affine"
+                          Detail="Visualizza la matrice per le trasformazioni affini"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.ShowAffineMatrixPage}" />
+            </TableSection>
+
+            <TableSection Title="Manipolazioni Tattili">
+                <TextCell Text="Manipolazione del tocco"
+                          Detail="Panoramica, ridimensionamento e rotazione di una bitmap"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.TouchManipulationPage}" />
+
+                <TextCell Text="Visualizzazione a dispersione bitmap"
+                          Detail="Panoramica, ridimensionamento e rotazione di più bitmap"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.BitmapScatterViewPage}" />
+
+                <TextCell Text="Scala angolo singolo dito"
+                          Detail="Esegue la panoramica e il ridimensionamento di una bitmap con un dito"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.SingleFingerCornerScalePage}" />
+            </TableSection>
+
+            <TableSection Title="Trasformazioni non affini">
+                <TextCell Text="Prospettiva di test"
+                          Detail="Sperimenta con la terza colonna della matrice"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.TestPerspectivePage}" />
+
+                <TextCell Text="Trasformazione Cono"
+                          Detail="Scopri come calcolare una trasformazione conica"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.TaperTransformPage}" />
+
+                <TextCell Text="Mostra matrice non affine"
+                          Detail="Visualizza la matrice per le trasformazioni non affin"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.ShowNonAffineMatrixPage}" />
+            </TableSection>
+
+            <TableSection Title="Rotazioni 3D">
+                <TextCell Text="Rotazione 3D"
+                          Detail="Ruota una bitmap 2D nello spazio 3D"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.Rotation3DPage}" />
+
+                <TextCell Text="Rotazione animata 3D"
+                          Detail="Anima un oggetto 2D nello spazio 3D"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.AnimatedRotation3DPage}" />
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</local:HomeBasePage>

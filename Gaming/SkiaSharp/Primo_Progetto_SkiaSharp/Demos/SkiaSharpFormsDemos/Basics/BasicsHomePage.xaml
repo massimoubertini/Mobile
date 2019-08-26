@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:HomeBasePage xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    xmlns:local="clr-namespace:SkiaSharpFormsDemos"
+                    x:Class="SkiaSharpFormsDemos.Basics.BasicsHomePage"
+                    Title="SkiaSharp  Nozioni di base sul disegno"
+                    Padding="10">
+    <TableView Intent="Menu">
+        <TableRoot>
+            <TableSection Title="Disegno di un cerchio">
+                <TextCell Text="Cerchio"
+                          Detail="Delinea e riempie un cerchio con SkiaSharp"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Basics.SimpleCirclePage}" />
+            </TableSection>
+
+            <TableSection Title="Integrazione con Xamarin.Forms">
+                <TextCell Text="Tap attiva/disattiva riempimento"
+                          Detail="Tap  lo schermo per attivare/disattivare il riempimento del cerchio"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Basics.TapToggleFillPage}" />
+
+                <TextCell Text="Esplora i Colori"
+                          Detail="Utilizza i cursori per selezionare il colore"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Basics.ColorExplorePage}" />
+            </TableSection>
+
+            <TableSection Title="Pixel e unità indipendenti dal dispositivo">
+                <TextCell Text="Dimensioni superficie"
+                          Detail="Visualizza la dimensione della superficie in tre modi diversi"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Basics.SurfaceSizePage}" />
+
+                <TextCell Text="Riempimento  Ellisse"
+                          Detail="Riempie la superficie con un'ellisse"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Basics.EllipseFillPage}" />
+            </TableSection>
+
+            <TableSection Title="Animazione di base">
+                <TextCell Text="Ellisse pulsata"
+                          Detail="Anima gli assi di un'ellisse"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Basics.PulsatingEllipsePage}" />
+
+                <TextCell Text="Espansione di cerchi"
+                          Detail="Anima i cerchi per espanderli per sempre"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Basics.ExpandingCirclesPage}" />
+            </TableSection>
+
+            <TableSection Title="Integrazione di testo e grafica">
+                <TextCell Text="Testo incornicato"
+                          Detail="Disegna un rettangolo arrotondato intorno ad una stringa di testo"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Basics.FramedTextPage}" />
+
+                <TextCell Text="Testo strutturato"
+                          Detail="Caratteri di testo del contorno"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Basics.OutlinedTextPage}" />
+            </TableSection>
+
+            <TableSection Title="Nozioni di base sulle bitmap">
+                <TextCell Text="Bitmap di base"
+                          Detail="Caricare e visualizzare bitmap"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Basics.BasicBitmapsPage}" />
+            </TableSection>
+
+            <TableSection Title="Trasparenza">
+                <TextCell Text="Codice"
+                          Detail="Anima il canale alfa per applicare una dissolvenza tra stringhe di testo"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Basics.CodeMoreCodePage}" />
+
+                <TextCell Text="Dissolvimento bitmap"
+                          Detail="Usa una trasparenza per dissolversi tra una bitmap e un'altra"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Basics.BitmapDissolvePage}" />
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</local:HomeBasePage>

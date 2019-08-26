@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:HomeBasePage xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    xmlns:local="clr-namespace:SkiaSharpFormsDemos"
+                    x:Class="SkiaSharpFormsDemos.Paths.PathsHomePage"
+                    Title="SkiaSharp Linee e Percorsi"
+                    Padding="10">
+    <TableView Intent="Menu">
+        <TableRoot>
+            <TableSection Title="Linee e Stroke Cap">
+                <TextCell Text="Stroke Cap"
+                          Detail="Elenca e visualizza le tre opzioni di stroke cap"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Paths.StrokeCapsPage}" />
+
+                <TextCell Text="Linee multiple"
+                          Detail="Disegna più linee utilizzando DrawPoints"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Paths.MultipleLinesPage}" />
+            </TableSection>
+
+            <TableSection Title="Nozioni di base sui percorsi">
+                <TextCell Text="Contorni a due triangoli"
+                          Detail="Usa un tracciato grafico per disegnare triangoli aperti e chiusi"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Paths.TwoTriangleContoursPage}" />
+
+                <TextCell Text="Giunzioni di tratti"
+                          Detail="Elenca e visualizza le tre opzioni di giunzioni di tratti"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Paths.StrokeJoinsPage}" />
+            </TableSection>
+
+            <TableSection Title="Tipi di riempimento del percorso">
+                <TextCell Text="Stella a cinque punte"
+                          Detail="Dimostra i tipi di riempimento del percorso"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Paths.FivePointedStarPage}" />
+
+                <TextCell Text="Cerchi sovrapposti"
+                          Detail="Disegna cerchi sovrapposti"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Paths.OverlappingCirclesPage}" />
+            </TableSection>
+
+            <TableSection Title="Polilinee ed equazioni parametriche">
+                <TextCell Text="Spirale di Archimede"
+                          Detail="Usa un tracciato grafico per disegnare una spirale"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Paths.ArchimedeanSpiralPage}" />
+            </TableSection>
+
+            <TableSection Title="Punti e trattini">
+                <TextCell Text="Punti e trattini"
+                          Detail="Rendering di una linea con punti e trattini"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Paths.DotsAndDashesPage}" />
+
+                <TextCell Text="Spirale animata"
+                          Detail="Anima una spirale archimedea"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Paths.AnimatedSpiralPage}" />
+            </TableSection>
+
+            <TableSection Title="Dipingere con le dita">
+                <TextCell Text="Dipingere con le dita"
+                          Detail="Disegna linee con il dito"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Paths.FingerPaintPage}" />
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</local:HomeBasePage>

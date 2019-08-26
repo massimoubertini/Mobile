@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:HomeBasePage xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    xmlns:local="clr-namespace:SkiaSharpFormsDemos"
+                    x:Class="SkiaSharpFormsDemos.HomePage"
+                    Title="Esempi di SkiaSharp Forms"
+                    Padding="10">
+    <TableView Intent="Menu">
+        <TableRoot>
+            <TableSection>
+                <TextCell Text="SkiaSharp Nozioni di base sul disegno"
+                          Detail="Concetti e coordinate grafiche di base"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Basics.BasicsHomePage}" />
+
+                <TextCell Text="SkiaSharp Linee e Percorsi"
+                          Detail="Usa SkiaSharp per disegnare linee e tracciati grafici"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Paths.PathsHomePage}" />
+
+                <TextCell Text="SkiaSharp Trasformazioni"
+                          Detail="Trasformazioni per la modifica degli elementi grafici"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Transforms.TransformsHomePage}" />
+
+                <TextCell Text="SkiaSharp Curve e Percorsi"
+                          Detail="Disegna curve e utilizza le funzioni del percorso"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Curves.CurvesHomePage}" />
+
+                <TextCell Text="SkiaSharp Bitmaps"
+                          Detail="Crea, disegna, salva e anima bitmap"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Bitmaps.BitmapsHomePage}" />
+
+                <TextCell Text="SkiaSharp Effetti"
+                          Detail="Usa sfumature, affondi bitmap, sfocatura e ombreggiatura"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type local:Effects.EffectsHomePage}" />
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</local:HomeBasePage>

@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CocosSharp" Version="1.7.1.0" />
+    <PackageReference Include="CocosSharp.Forms" Version="1.7.1.0" />
+    <PackageReference Include="Xamarin.Forms" Version="4.2.0.709249" />
+  </ItemGroup>
+
+</Project>
